@@ -1,7 +1,0 @@
-/home/companion/Vic2PopSizeAdjuster/obj/Debug/net8.0/Demo.OpenFileDialog.csproj.AssemblyReference.cache
-/home/companion/Vic2PopSizeAdjuster/obj/Debug/net8.0/Avalonia/Resources.Inputs.cache
-/home/companion/Vic2PopSizeAdjuster/obj/Debug/net8.0/Avalonia/resources
-/home/companion/Vic2PopSizeAdjuster/obj/Debug/net8.0/Demo.OpenFileDialog.GeneratedMSBuildEditorConfig.editorconfig
-/home/companion/Vic2PopSizeAdjuster/obj/Debug/net8.0/Demo.OpenFileDialog.AssemblyInfoInputs.cache
-/home/companion/Vic2PopSizeAdjuster/obj/Debug/net8.0/Demo.OpenFileDialog.AssemblyInfo.cs
-/home/companion/Vic2PopSizeAdjuster/obj/Debug/net8.0/Demo.OpenFileDialog.csproj.CoreCompileInputs.cache
