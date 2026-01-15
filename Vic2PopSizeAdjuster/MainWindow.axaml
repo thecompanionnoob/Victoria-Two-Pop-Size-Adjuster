@@ -1,0 +1,49 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:Vic2PopSizeAdjuster"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="Vic2PopSizeAdjuster.MainWindow"
+        x:DataType="vm:MainWindowViewModel"
+        Icon="/Assets/avalonia-logo.ico"
+        Title="Vic2PopSizeAdjuster"
+        Width="800"
+        Height="450">
+
+    <Design.DataContext>
+        <!-- This only sets the DataContext for the previewer in an IDE,
+             to set the actual DataContext for runtime, set the DataContext property in code (look at App.axaml.cs) -->
+        <vm:MainWindowViewModel/>
+    </Design.DataContext>
+
+    <StackPanel>
+        <Border Margin="5" CornerRadius="10" Background="LightBlue">
+            <TextBlock 
+                Margin="5"
+                FontSize="24"
+                HorizontalAlignment="Center"
+                Text="Victoria II Pop Size Adjuster"
+            >
+            </TextBlock>
+        </Border>
+        <Grid HorizontalAlignment="Center" ShowGridLines="false" Margin="5" ColumnDefinitions="240, 240, 240" RowDefinitions="Auto, Auto, Auto">
+
+            <TextBlock Grid.Row="0" Grid.Column="0" Margin="10">Path To Pop File:</TextBlock>
+            <Button Grid.Row="0" Grid.Column="1" Command="{Binding OpenFileCommand}">Open File</Button>
+            <TextBlock Grid.Row="0" Grid.Column="2" Margin="10" x:Name="PathSelectedLabel"></TextBlock>
+
+            <TextBlock Grid.Row="1" Grid.Column="0" Margin="10">Multiplier:</TextBlock>
+            <TextBox Grid.Row="1" Grid.Column="1" Margin="0 5" Text="{Binding MultiplierText}" x:Name="MultiplierTextField">0</TextBox>
+
+            <TextBlock Grid.Row="2" Grid.Column="0" Margin="10">Pop Type:</TextBlock>
+            <TextBox Grid.Row="2" Grid.Column="1" Margin="0 5" Text="{Binding PopTypeToMult}" x:Name="PopTypeTextField">All</TextBox>
+            <TextBlock Grid.Row="2" Grid.Column="2" Margin="10">(Case-Sensitive, "All" for all pops)</TextBlock>
+
+        </Grid>
+        <Button HorizontalAlignment="Center" Command="{Binding SubmitCommand}">Multiply</Button>
+
+        <TextBlock Margin="5" FontSize="24" HorizontalAlignment="Center" Text="{Binding ErrorText}" x:Name="ErrorText"></TextBlock>
+    </StackPanel>
+
+</Window>
